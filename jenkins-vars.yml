@@ -1,0 +1,29 @@
+---
+
+# jenkins variables
+project_name: docker-shotcut
+external_type: github_stable
+release_type: stable
+release_tag: latest
+ls_branch: main
+repo_vars:
+  - EXT_GIT_BRANCH = 'master'
+  - EXT_USER = 'mltframework'
+  - EXT_REPO = 'shotcut'
+  - BUILD_VERSION_ARG = 'SHOTCUT_RELEASE'
+  - LS_USER = 'linuxserver'
+  - LS_REPO = 'docker-shotcut'
+  - CONTAINER_NAME = 'shotcut'
+  - DOCKERHUB_IMAGE = 'linuxserver/shotcut'
+  - DEV_DOCKERHUB_IMAGE = 'lsiodev/shotcut'
+  - PR_DOCKERHUB_IMAGE = 'lspipepr/shotcut'
+  - DIST_IMAGE = 'ubuntu'
+  - MULTIARCH = 'false'
+  - CI = 'true'
+  - CI_WEB = 'true'
+  - CI_PORT = '3000'
+  - CI_SSL = 'false'
+  - CI_DELAY = '120'
+  - CI_DOCKERENV = 'TZ=US/Pacific'
+  - CI_AUTH = 'user:password'
+  - CI_WEBPATH = ''
