@@ -14,6 +14,10 @@ ENV \
   TITLE="Shotcut"
 
 RUN \
+  echo "**** add icon ****" && \
+  curl -o \
+    /kclient/public/icon.png \
+    https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/shotcut-logo.png && \
   echo "**** install runtime packages ****" && \
   apt-get update && \
   apt-get install -y --no-install-recommends \
@@ -32,7 +36,6 @@ RUN \
     "https://github.com/mltframework/shotcut/releases/download/${SHOTCUT_RELEASE}/shotcut-linux-x86_64-${SHOTCUT_SHORT_VER}.txz" && \
   tar xvf /tmp/shotcut-tarball.txz -C \
     /app/shotcut --strip-components=2 && \
-  sed -i 's|</applications>|  <application name="shotcut" type="normal">\n    <maximized>yes</maximized>\n  </application>\n</applications>|' /etc/xdg/openbox/rc.xml && \
   echo "**** cleanup ****" && \
   apt-get clean && \
   rm -rf \
