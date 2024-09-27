@@ -6,6 +6,14 @@ external_type: github_stable
 release_type: stable
 release_tag: latest
 ls_branch: main
+external_artifact_check: |
+  assets=$(curl -u "${{ '{{' }} secrets.CR_USER {{ '}}' }}:${{ '{{' }} secrets.CR_PAT {{ '}}' }}" -sX GET "https://api.github.com/repos/mltframework/shotcut/releases/tags/${EXT_RELEASE}" | jq -r '.assets[].browser_download_url')
+  SHOTCUT_SHORT_VER=$(echo ${EXT_RELEASE} | sed 's|[v.]||g')
+  if grep -q "shotcut-linux-x86_64-${SHOTCUT_SHORT_VER}.txz$" <<< "${assets}"; then
+    artifacts_found="true"
+  else
+    artifacts_found="false"
+  fi
 repo_vars:
   - EXT_GIT_BRANCH = 'master'
   - EXT_USER = 'mltframework'
