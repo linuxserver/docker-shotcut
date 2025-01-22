@@ -6,6 +6,7 @@ project_url: "https://www.shotcut.org/"
 project_logo: "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/shotcut-logo.png"
 project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) is a free, open source, cross-platform video editor."
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
+project_categories: "Video Editor"
 project_blurb_optional_extras_enabled: false
 # supported architectures
 available_architectures:
