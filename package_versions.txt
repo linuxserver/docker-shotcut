@@ -939,7 +939,7 @@ mesa-libgallium                                                               25
 mesa-va-drivers                                                               25.0.7-2~bpo12+1                           deb                         
 mesa-vulkan-drivers                                                           25.0.7-2~bpo12+1                           deb                         
 mlt2chapters                                                                  0.1.0                                      npm                         
-mlt2edl                                                                       0.1.0                                      npm                         
+mlt2edl                                                                       0.2.0                                      npm                         
 mount                                                                         2.38.1-5+deb12u3                           deb                         
 msgpack                                                                       1.1.1                                      python                      
 multidict                                                                     6.6.4                                      python                      
