@@ -37,7 +37,7 @@ RUN \
     /tmp/shotcut-tarball.txz -L \
     "${SHOTCUT_URL}" && \
   tar xvf /tmp/shotcut-tarball.txz -C \
-    /app/shotcut --strip-components=2 && \
+    /app/shotcut --strip-components=1 && \
   echo "**** cleanup ****" && \
   apt-get clean && \
   rm -rf \
