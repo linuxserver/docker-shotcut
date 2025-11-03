@@ -31,12 +31,13 @@ RUN \
     SHOTCUT_RELEASE=$(curl -sX GET "https://api.github.com/repos/mltframework/shotcut/releases/latest" \
     | jq -r .tag_name); \
   fi && \
-  SHOTCUT_SHORT_VER=$(echo ${SHOTCUT_RELEASE} | sed 's|[v.]||g') && \
-  curl -o \
+  SHOTCUT_URL=$(curl -sX GET "https://api.github.com/repos/mltframework/shotcut/releases/tags/${SHOTCUT_RELEASE}" | jq -r '.assets[].browser_download_url' \
+    | grep "x86_64" | grep ".txz") && \
+  curl -fo \
     /tmp/shotcut-tarball.txz -L \
-    "https://github.com/mltframework/shotcut/releases/download/${SHOTCUT_RELEASE}/shotcut-linux-x86_64-${SHOTCUT_SHORT_VER}.txz" && \
+    "${SHOTCUT_URL}" && \
   tar xvf /tmp/shotcut-tarball.txz -C \
-    /app/shotcut --strip-components=2 && \
+    /app/shotcut --strip-components=1 && \
   echo "**** cleanup ****" && \
   apt-get clean && \
   rm -rf \
