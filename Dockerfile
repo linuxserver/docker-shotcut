@@ -11,7 +11,8 @@ LABEL maintainer="aptalca"
 
 ENV \
   HOME="/config" \
-  TITLE="Shotcut"
+  TITLE="Shotcut" \
+  NO_GAMEPAD="true"
 
 RUN \
   echo "**** add icon ****" && \

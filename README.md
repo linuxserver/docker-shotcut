@@ -591,6 +591,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **05.02.26:** - Disable gamepad interposer.
 * **28.12.25:** - Add Wayland init logic.
 * **22.09.25:** - Rebase to Debian Trixie.
 * **12.07.25:** - Rebase to Selkies, HTTPS IS NOW REQUIRED.
