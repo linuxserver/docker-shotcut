@@ -12,7 +12,8 @@ LABEL maintainer="aptalca"
 ENV \
   HOME="/config" \
   TITLE="Shotcut" \
-  NO_GAMEPAD="true"
+  NO_GAMEPAD="true" \
+  PIXELFLUX_WAYLAND=true
 
 RUN \
   echo "**** add icon ****" && \
