@@ -1091,7 +1091,6 @@ pyee                                                                          13
 pylibsrtp                                                                     1.0.0                                  python                      
 pynput                                                                        1.8.1                                  python                      
 pyopenssl                                                                     26.1.0                                 python                      
-python                                                                        3.10.12                                binary                      
 python-xlib                                                                   0.33                                   python                      
 python3                                                                       3.13.5-1                               deb                         
 python3-minimal                                                               3.13.5-1                               deb                         
